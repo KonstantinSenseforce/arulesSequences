@@ -63,8 +63,8 @@ setMethod("[", signature(x = "sequencerules", i = "ANY", j = "missing", drop = "
 setMethod("lhs", signature(x = "sequencerules"),
     function(x) {
         q <- if (length(x@quality) > 0)
-                 data.frame(support = x@quality$confidence / 
-                                      x@quality$support)
+                 data.frame(support = x@quality$support / 
+                                      x@quality$confidence)
              else
                  NULL
 
